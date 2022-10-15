@@ -1,0 +1,23 @@
+from particula import Particula
+
+class Administradora:
+    def __init__(self):
+        self.__particula = []
+        
+    def agregar_inicio(self, particula:Particula):
+        self.__particula.insert(0, particula)
+        
+    def agregar_final(self, particula:Particula):
+        self.__particula.append(particula)
+        
+    def mostrar(self):
+        for particula in self.__particula:
+            print(particula)
+            
+p01 = Particula(123, 1, 3, 2, 4, 25, 2, 3, 4)
+p02 = Particula(12345, 2, 1, 4, 3, 15, 23, 23, 43)
+administradora = Administradora()
+administradora.agregar_inicio(p01)
+administradora.agregar_final(p02)
+administradora.agregar_inicio(p01)
+administradora.mostrar()
